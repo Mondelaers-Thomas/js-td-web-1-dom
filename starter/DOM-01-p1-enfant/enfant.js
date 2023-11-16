@@ -13,8 +13,15 @@ AIDES :
 */
 
 // Insérez votre code ici
-
-
+function afficherEnfant(noeud, indice){
+    if(noeud.nodeType === document.TEXT_NODE){
+        console.error('Type de noeud incorrect');
+    } else if(indice < 0 || indice > noeud.childNodes.length){
+        console.error('Indice incorrecte');
+    } else {
+    console.log(noeud.childNodes[indice]);
+    }
+}
 
 
 

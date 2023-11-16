@@ -16,10 +16,6 @@ EXERCICE 1 : Afficher dans la console
 - le titre du document
 */
 
-
-
-
-
 // 2. Découvrir le type d'un nœud
 /*
 Chaque objet du DOM à une propriété nodeType qui indique son type.
@@ -36,11 +32,6 @@ Afficher la valeur de la propriété nodeType du body dans la console
 (N.B. pour comprendre le résultat affiché, voir la documentation du MDN sur nodeType
 https://developer.mozilla.org/fr/docs/Web/API/Node/nodeType)
 */
-
-
-
-
-
 
 // 3. Accéder aux enfants d'un nœud élément
 /*

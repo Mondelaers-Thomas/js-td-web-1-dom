@@ -9,7 +9,9 @@ SOURCE : https://github.com/oc-courses/javascript-web
 */
 
 // Insérez votre code ici
-
+function compterElements(noeud) {
+    return document.querySelectorAll(noeud).length;
+}
 
 
 console.log(compterElements("p")); // Doit afficher 4

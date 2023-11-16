@@ -19,9 +19,48 @@ SOURCE : https://github.com/oc-courses/javascript-web
     - si l'élément d'id "trompette" possède la classe "cuivre" (doit afficher true)
     - si l'élément d'id "contrebasse" possède la classe "cordes" (doit afficher "Aucun élément ne possède l'id contrebasse")
 */
+function getInfosLiens() {
+    const nbLien = document.querySelectorAll('a').length;
+    console.log(`Nombres de liens sur cette page : ${nbLien}`);
+    if(nbLien > 0){
+    const hrefFirst = document.querySelector('a').getAttribute('href');
+    console.log(`Premier lien de la page : ${hrefFirst}`);
+    const hrefLast = document.getElementsByTagName('a')[nbLien - 1].getAttribute('href');
+    console.log(`Dernier lien de la page : ${hrefLast}`);
+    }
+}
+function possede(id, classe) {
+    const instrumentId = document.getElementById(id);
+    if(instrumentId === null){
+        console.log("Aucun élément ne possède l'id " + id);
+    } else if(instrumentId.classList.contains(classe)){
+        console.log('true');
+    } else {
+        console.log('false');
+    }
+}
+getInfosLiens(); //5, https://fr.wikipedia.org/wiki/Clarinette, https://fr.wikipedia.org/wiki/Clavecin
 
+// Création nouveau élément pour la page :
+//nouveau li
+const liClavecin = document.createElement('li');
+liClavecin.id = 'clavecin';
+liClavecin.setAttribute('class', 'cordes pinces');
+liClavecin.textContent = 'Le ';
+//nouveau anchor
+const aClavecin = document.createElement('a');
+aClavecin.setAttribute('href', 'https://fr.wikipedia.org/wiki/Clavecin');
+aClavecin.textContent = 'clavecin';
+//ajout élément a dans le li
+liClavecin.appendChild(aClavecin);
+//li dans le ul
+document.querySelector('ul').appendChild(liClavecin);
 
+getInfosLiens(); //6, https://fr.wikipedia.org/wiki/Clarinette, https://fr.wikipedia.org/wiki/Clavecin
 
-
-
+//Test fonction possede
+possede('saxophone', 'bois');
+possede('saxophone', 'cuivre');
+possede('trompette', 'cuivre');
+possede('contrebasse', 'cordes');
 

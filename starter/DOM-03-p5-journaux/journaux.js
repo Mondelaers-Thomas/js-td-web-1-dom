@@ -15,3 +15,26 @@ Il a sans doute été simplifié à outrance dans un souci
 de rendre la génération la plus simple possible en JS.
 TODO : améliorer le balisage HTML généré !!! */
 
+const journaux = ["http://lemonde.fr", "http://lefigaro.fr", "http://liberation.fr"];
+
+const ulJournaux = document.createElement('ul');
+ulJournaux.id = 'journauxfr';
+
+document.getElementById('contenu').appendChild(ulJournaux);
+
+journaux.forEach((journal => {
+    //Création baliser li
+    const liJournal = document.createElement('li');
+    liJournal.setAttribute('class',  journal.substring(7, journal.length-3))
+    liJournal.style.listStyleType = 'circle';
+    //Création balise a
+    const aJournal = document.createElement('a');
+    aJournal.setAttribute('href', journal);
+    aJournal.setAttribute('title', `Cliquez pour lire le journal ${journal.substring(7, journal.length-3)}`)
+    aJournal.textContent = 'Journal ' + journal.substring(7, journal.length-3);
+
+    liJournal.appendChild(aJournal);
+
+    ulJournaux.appendChild(liJournal);
+
+}))

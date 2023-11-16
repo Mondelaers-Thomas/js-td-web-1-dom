@@ -7,17 +7,15 @@ http://icant.co.uk/articles/domessentials/
 
 /* 1. Cibler l'élément d'id nav */
 
-
 /* 2. Récupérer tous les li */
-
 
 /* 3. Cibler le 4e li */
 
 
 /* 4. Compter le nombre de li dans la page */
 
-
 /* 5. Cibler le premier li pair */
+
 
 
 /* 6. Récupérer tous les li de classe impair */
@@ -25,16 +23,13 @@ http://icant.co.uk/articles/domessentials/
 
 /* a) afficher ce qu'on obtient */
 
-
 /* b) afficher le 2e li de classe impair */
-
 
 /* c) afficher chacun des li impair */
 
 
 
 /* d) compter le nombre de li de classe impair dans la page */
-
 
 
 /* 7. Cibler le 4e li puis, à partir de là, cibler son frère juste avant lui */
